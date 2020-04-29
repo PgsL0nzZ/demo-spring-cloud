@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--  这个pom文件作为父pom文件，起到依赖版本控制的作用，其他module工程继承该pom -->
+
+    <!--  直接产生项目的包结构 -->
+    <groupId>com.lotus</groupId>
+    <artifactId>spring-cloud-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- packaging: 打包的机制，如pom, jar, maven-plugin, ejb, war, ear, rar, par   -->
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>demo for springCloud</description>
+    <inceptionYear>2020</inceptionYear>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>zhaishenglong</name>
+            <email>zsl94nb2013@163.com</email>
+            <roles>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+        </developer>
+    </developers>
+
+
+    <!-- 定义父 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <!-- 该标签目的是帮助当前pom文件找到parent标签所引用的parent pom文件位置-->
+        <!-- 默认maven将会从当前pom文件的父级目录查找-->
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+    </properties>
+
+    <!-- 定义依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 必须maven2.9版本以上。在根项目中定义依赖管理配置，可被子module继承！-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <!-- 被继承的module 可直接引用，不需要指定version，如果制定了version则以被继承的module为准-->
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <!-- 仅用于type=pom的dependency -->
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 定义源代码目录配置，输出目录配置，插件配置等 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <modules>
+        <module>demo-eureka</module>
+        <module>demo-client</module>
+        <module>demo-ribbon</module>
+        <module>demo-feign</module>
+    </modules>
+
+</project>

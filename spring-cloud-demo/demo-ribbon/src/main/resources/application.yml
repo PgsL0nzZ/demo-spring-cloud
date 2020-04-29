@@ -1,0 +1,14 @@
+server:
+  port: 13021
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:13001/eureka/
+
+spring:
+  application:
+    name: demo-ribbon
+

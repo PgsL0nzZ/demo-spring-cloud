@@ -1,0 +1,14 @@
+server:
+  port: 13031
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:13001/eureka/
+
+spring:
+  application:
+    # 根据 name进行注册和访问
+    name: demo-feign

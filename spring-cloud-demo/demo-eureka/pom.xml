@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lotus</groupId>
+    <artifactId>demo-eureka</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.lotus</groupId>
+        <artifactId>spring-cloud-demo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>demo-eureka</name>
+    <description>Demo project for Eureka Server</description>
+
+
+    <dependencies>
+        <!-- eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <!-- 定义默认resource文件所在目录 ，必须在src前面加/，相对路径，用绝对路径会找不到？-->
+                <directory>\src\main\resources</directory>
+                <!-- 这个不可以×-->
+<!--                <directory>C:\newproject\spring-cloud-demo\demo-eureka\src\main\resources</directory>-->
+                <!-- 这个可以√-->
+<!--                <directory>spring-cloud-demo\${basedir}\src\main\resources</directory>-->
+                <!-- 定义build后resource存放的目录, target/classes/${targetPath}  -->
+                <targetPath>/resource</targetPath>
+            </resource>
+        </resources>
+    </build>
+
+</project>
