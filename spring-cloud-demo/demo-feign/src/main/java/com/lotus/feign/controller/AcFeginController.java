@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class AcFeginController {
 
     @Autowired
-    AcServiceFeign acServiceFeign;
+    AcServiceFeign acServiceFeignHystrix;
 
     @GetMapping("")
     public String getHello(){
-        return acServiceFeign.getHelloFromAc();
+        return acServiceFeignHystrix.getHelloFromAc("xiaoMing");
     }
 
 }

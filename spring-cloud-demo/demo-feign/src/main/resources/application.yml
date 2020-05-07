@@ -10,5 +10,8 @@ eureka:
 
 spring:
   application:
-    # 根据 name进行注册和访问
     name: demo-feign
+
+feign:
+  hystrix:
+    enabled: true
