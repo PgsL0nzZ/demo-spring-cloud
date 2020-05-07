@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-eureka" />
-        <module name="demo-feign" />
         <module name="demo-ribbon" />
+        <module name="demo-feign" />
         <module name="demo-client-ac" />
       </profile>
     </annotationProcessing>
