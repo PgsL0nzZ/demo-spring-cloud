@@ -89,6 +89,7 @@
         <module>demo-client</module>
         <module>demo-ribbon</module>
         <module>demo-feign</module>
+        <module>demo-zuul</module>
     </modules>
 
 </project>

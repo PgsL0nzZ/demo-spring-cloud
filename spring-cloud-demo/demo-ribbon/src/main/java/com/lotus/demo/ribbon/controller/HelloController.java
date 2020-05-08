@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/lotus/ribbon")
+@RequestMapping("/api/v1/ribbon")
 public class HelloController {
 
     @Autowired
     HelloService helloService;
 
-    @GetMapping("")
+    @GetMapping("/hi")
     public String hi(){
         return helloService.hiService_hystrix("xiaoMing");
     }

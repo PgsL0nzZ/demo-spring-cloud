@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
-@RequestMapping(value = "/api/v1/lotus/ac")
+@RequestMapping(value = "/api/v1/ac")
 public class HomeController {
 
     @Value("${server.port}")
@@ -19,6 +22,15 @@ public class HomeController {
     @GetMapping("")
     public String home(){
         return this.name+":"+this.port;
+    }
+
+    @GetMapping("/list")
+    public List<String> list(){
+        return new ArrayList<String>(){
+            {
+                add("a");
+            }
+        };
     }
 
 }

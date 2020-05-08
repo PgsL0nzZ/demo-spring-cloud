@@ -1,0 +1,38 @@
+server:
+  port: 13041
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:13001/eureka/
+
+spring:
+  application:
+    name: demo-zuul
+
+zuul:
+  routes:
+    route-ac:
+      # 这个key让我吃亏甚多呀，默认为true,表示在转发请求之前，从请求中删除代理前缀
+      stripPrefix: false
+      path: /api/v1/ac/**
+      # url: http://127.0.0.1:13011
+      serviceId: client-ac
+    route-ribbon:
+      stripPrefix: false
+      path: /api/v1/ribbon/**
+      serviceId: demo-ribbon
+    route-feign:
+      stripPrefix: false
+      path: /api/v1/feign/**
+      serviceId: demo-feign
+
+#management:
+#   endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#    routes:
+#     enabled: true
+#    filters:
+#     enabled: true

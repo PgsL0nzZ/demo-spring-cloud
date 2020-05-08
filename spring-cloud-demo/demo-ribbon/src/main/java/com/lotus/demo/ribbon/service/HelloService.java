@@ -12,12 +12,12 @@ public class HelloService {
     RestTemplate restTemplate;
 
     public String hiService(){
-        return restTemplate.getForObject("http://client-ac/api/v1/lotus/ac", String.class);
+        return restTemplate.getForObject("http://client-ac/api/v1/ac", String.class);
     }
 
     @HystrixCommand(fallbackMethod = "hiError")
     public String hiService_hystrix(String name){
-        return restTemplate.getForObject("http://client-ac/api/v1/lotus/ac",String.class);
+        return restTemplate.getForObject("http://client-ac/api/v1/ac",String.class);
     }
 
     //测试熔断
