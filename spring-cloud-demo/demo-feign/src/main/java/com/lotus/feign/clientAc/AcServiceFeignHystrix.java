@@ -7,6 +7,6 @@ public class AcServiceFeignHystrix implements AcServiceFeign {
 
     @Override
     public String getHelloFromAc(String name) {
-        return "sorry,"+name+",server is down!";
+        return "sorry," + name + ",server is down!";
     }
 }

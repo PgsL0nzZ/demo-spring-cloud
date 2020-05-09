@@ -3,7 +3,6 @@ package com.lotus.zuul.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
@@ -43,15 +42,15 @@ public class BeforFilter extends ZuulFilter {
         RequestContext rc = RequestContext.getCurrentContext();
         // 和普通拦截器不同的是：最后返回null表示通过，而拦截器需要返回true,false来表达
         HttpServletRequest request = rc.getRequest();
-        System.out.printf("请求方法%s",request.getMethod());
-        System.out.printf("请求地址来自：%s",request.getRemoteHost());
+        System.out.printf("请求方法%s", request.getMethod());
+        System.out.printf("请求地址来自：%s", request.getRemoteHost());
         String token = request.getHeader("Authorization");
-        if(StringUtils.isEmpty(token)){
+        if (StringUtils.isEmpty(token)) {
             rc.setSendZuulResponse(false);// 不转发
-            rc.setResponseStatusCode(400);// 返回错误码500
+            rc.setResponseStatusCode(400);// 返回错误码400
             try {
                 rc.getResponse().getWriter().write("token is empty");// 返回消息
-            }catch (Exception e){
+            } catch (Exception e) {
 
             }
             return null;

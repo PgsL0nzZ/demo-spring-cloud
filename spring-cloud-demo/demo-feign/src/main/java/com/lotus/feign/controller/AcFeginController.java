@@ -14,7 +14,7 @@ public class AcFeginController {
     AcServiceFeign acServiceFeignHystrix;
 
     @GetMapping("/hi")
-    public String getHello(){
+    public String getHello() {
         return acServiceFeignHystrix.getHelloFromAc("xiaoMing");
     }
 

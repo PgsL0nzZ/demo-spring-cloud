@@ -36,18 +36,18 @@
             </plugin>
         </plugins>
 
-<!--        <resources>-->
-<!--            <resource>-->
-<!--                &lt;!&ndash; 定义默认resource文件所在目录 ，必须在src前面加/，相对路径，用绝对路径会找不到？&ndash;&gt;-->
-<!--                <directory>\src\main\resources</directory>-->
-<!--                &lt;!&ndash; 这个不可以×&ndash;&gt;-->
-<!--&lt;!&ndash;                <directory>C:\newproject\spring-cloud-demo\demo-eureka\src\main\resources</directory>&ndash;&gt;-->
-<!--                &lt;!&ndash; 这个可以√&ndash;&gt;-->
-<!--&lt;!&ndash;                <directory>spring-cloud-demo\${basedir}\src\main\resources</directory>&ndash;&gt;-->
-<!--                &lt;!&ndash; 定义build后resource存放的目录, target/classes/${targetPath}  &ndash;&gt;-->
-<!--                <targetPath>/resource</targetPath>-->
-<!--            </resource>-->
-<!--        </resources>-->
+        <!--        <resources>-->
+        <!--            <resource>-->
+        <!--                &lt;!&ndash; 定义默认resource文件所在目录 ，必须在src前面加/，相对路径，用绝对路径会找不到？&ndash;&gt;-->
+        <!--                <directory>\src\main\resources</directory>-->
+        <!--                &lt;!&ndash; 这个不可以×&ndash;&gt;-->
+        <!--&lt;!&ndash;                <directory>C:\newproject\spring-cloud-demo\demo-eureka\src\main\resources</directory>&ndash;&gt;-->
+        <!--                &lt;!&ndash; 这个可以√&ndash;&gt;-->
+        <!--&lt;!&ndash;                <directory>spring-cloud-demo\${basedir}\src\main\resources</directory>&ndash;&gt;-->
+        <!--                &lt;!&ndash; 定义build后resource存放的目录, target/classes/${targetPath}  &ndash;&gt;-->
+        <!--                <targetPath>/resource</targetPath>-->
+        <!--            </resource>-->
+        <!--        </resources>-->
     </build>
 
 </project>

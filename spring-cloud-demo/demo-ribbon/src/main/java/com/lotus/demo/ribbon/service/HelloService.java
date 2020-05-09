@@ -11,18 +11,18 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
-    public String hiService(){
+    public String hiService() {
         return restTemplate.getForObject("http://client-ac/api/v1/ac", String.class);
     }
 
     @HystrixCommand(fallbackMethod = "hiError")
-    public String hiService_hystrix(String name){
-        return restTemplate.getForObject("http://client-ac/api/v1/ac",String.class);
+    public String hiService_hystrix(String name) {
+        return restTemplate.getForObject("http://client-ac/api/v1/ac", String.class);
     }
 
     //测试熔断
-    public String hiError(String name){
-        return "sorry,"+name+",server is down!";
+    public String hiError(String name) {
+        return "sorry," + name + ",server is down!";
     }
 
 

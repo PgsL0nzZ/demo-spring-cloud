@@ -25,7 +25,7 @@ public class DemoRibbonApplication {
     // @LoadBalanced注解表明这个restRemplate开启负载均衡的功能
     @Bean
     @LoadBalanced
-    RestTemplate restTemplate(){
+    RestTemplate restTemplate() {
         return new RestTemplate();
     }
 

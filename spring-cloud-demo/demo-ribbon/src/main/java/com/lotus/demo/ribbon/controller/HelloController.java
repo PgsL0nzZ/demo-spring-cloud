@@ -14,7 +14,7 @@ public class HelloController {
     HelloService helloService;
 
     @GetMapping("/hi")
-    public String hi(){
+    public String hi() {
         return helloService.hiService_hystrix("xiaoMing");
     }
 

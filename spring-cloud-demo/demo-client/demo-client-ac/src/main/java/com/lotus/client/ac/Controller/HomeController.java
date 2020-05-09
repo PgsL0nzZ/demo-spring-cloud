@@ -20,13 +20,13 @@ public class HomeController {
     String name;
 
     @GetMapping("")
-    public String home(){
-        return this.name+":"+this.port;
+    public String home() {
+        return this.name + ":" + this.port;
     }
 
     @GetMapping("/list")
-    public List<String> list(){
-        return new ArrayList<String>(){
+    public List<String> list() {
+        return new ArrayList<String>() {
             {
                 add("a");
             }
