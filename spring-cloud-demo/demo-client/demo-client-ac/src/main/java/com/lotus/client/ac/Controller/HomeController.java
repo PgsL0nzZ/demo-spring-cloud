@@ -33,4 +33,13 @@ public class HomeController {
         };
     }
 
+    @Value("${foo}")
+    String foo;
+
+
+    @GetMapping("/config")
+    public String config(){
+        return foo;
+    }
+
 }

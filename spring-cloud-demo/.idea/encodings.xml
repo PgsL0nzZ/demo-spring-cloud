@@ -4,8 +4,10 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-client/demo-client-ac" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-zuul" charset="UTF-8" />
   </component>
 </project>

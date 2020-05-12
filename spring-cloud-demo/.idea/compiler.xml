@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-eureka" />
-        <module name="demo-ribbon" />
+        <module name="demo-config" />
         <module name="demo-feign" />
         <module name="demo-client-ac" />
+        <module name="demo-eureka" />
+        <module name="demo-ribbon" />
+        <module name="demo-zuul" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,9 +19,11 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo-client" options="-parameters" />
       <module name="demo-client-ac" options="-parameters" />
+      <module name="demo-config" options="-parameters" />
       <module name="demo-eureka" options="-parameters" />
       <module name="demo-feign" options="-parameters" />
       <module name="demo-ribbon" options="-parameters" />
+      <module name="demo-zuul" options="-parameters" />
     </option>
   </component>
 </project>

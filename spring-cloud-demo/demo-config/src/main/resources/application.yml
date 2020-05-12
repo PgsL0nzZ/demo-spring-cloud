@@ -1,0 +1,28 @@
+#There is also a "native" profile in the Config Server that doesn’t use Git,
+#but just loads the config files from the local classpath or file system
+#(any static URL you want to point to with "spring.cloud.config.server.native.searchLocations").
+#To use the native profile just launch the Config Server with "spring.profiles.active=native".
+
+# absolute paths in Windows require an extra "/", e.g. file:///${user.home}/config-repo
+
+server:
+  port: 13011
+
+spring:
+  application:
+    name: demo-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:13001/eureka/
+
+
+
