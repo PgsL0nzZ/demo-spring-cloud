@@ -1,18 +1,18 @@
 # demo-spring-cloud
 The demo about spring cloud system
 
---2020-04-29--
+--2020-01-29--
 
 1.eureka 服务发现， 
 2.client 服务注册， 
 3.feign/ribbon+restTemplate  服务负载均衡
 
---2020-05-07--
+--2020-02-07--
 
 1.ribbon 熔断器hystrix， 
 2.feign 自带熔断器，D版本后需自动打开
 
---2020-05-08--
+--2020-02-08--
 
 1.zuul 网关路由配置，stripPrefix坑
 
@@ -22,7 +22,7 @@ The demo about spring cloud system
 
 3.zuul 过滤器的应用，返回值的处理
 
---2020-05-12--
+--2020-02-12--
 
 1.config-server ，配置中心的配置方式有 3种：git(https://)系统相对路径(classpath),文件系统(file:///)
 
