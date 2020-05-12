@@ -15,4 +15,8 @@ spring:
   cloud:
     config:
       profile: pro
-      uri: http://127.0.0.1:13011
+      # 通过禁用uri,利用config.discovery来实现configserver的高可用--负载均衡
+      # uri: http://127.0.0.1:13011
+      discovery:
+        enabled: true
+        service-id: demo-config
