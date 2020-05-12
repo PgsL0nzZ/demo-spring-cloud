@@ -32,5 +32,7 @@ The demo about spring cloud system
 
 4.eureka-client 集成config-client
 
+5.config.discovery 实现服务名注册，实现config-server的高可用--负载均衡
+
 
 
